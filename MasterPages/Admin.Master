@@ -1,0 +1,42 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="KhedutPlus.MasterPages.Admin" %>
+<%@ Register TagPrefix="khedut" TagName="AdminSidebar" Src="~/UserControls/AdminSidebar.ascx" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Khedut Plus Admin Portal</title>
+    <link rel="stylesheet" href="/Content/css/site.css" />
+    <asp:ContentPlaceHolder ID="AdminHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="adminForm" runat="server">
+        <div class="portal-layout">
+            <khedut:AdminSidebar ID="AdminSidebarCtrl" runat="server" />
+            
+            <div class="portal-main">
+                <header class="portal-topbar" style="background-color: #ffffff; padding: 20px 32px;">
+                    <div>
+                        <h1 style="font-size: 1.5rem; font-weight: 700; color: #0f172a;"><asp:ContentPlaceHolder ID="AdminPageTitle" runat="server">Agro Dashboard</asp:ContentPlaceHolder></h1>
+                        <p style="font-size: 0.8125rem; color: #64748b; margin-top: 2px;"><asp:ContentPlaceHolder ID="AdminPageSubtitle" runat="server">Overview of your agro management ecosystem and active registrations.</asp:ContentPlaceHolder></p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div class="live-badge">
+                            <span class="live-pulse"></span>
+                            <span>Live System Online</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="portal-body">
+                    <asp:ContentPlaceHolder ID="AdminContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="/Scripts/js/site.js"></script>
+    <asp:ContentPlaceHolder ID="AdminScripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

@@ -1,0 +1,1017 @@
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD52F68F-DFD1-437F-A1A7-B0655AE62671}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CIE_2.net</RootNamespace>
+    <AssemblyName>CIE-2.net</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AgroShops.aspx" />
+    <Content Include="Admin\Crops.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Farmers.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Products.aspx" />
+    <Content Include="Admin\Register.aspx" />
+    <Content Include="Admin\Schemes.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Farmer\AgroStoreDetails.aspx" />
+    <Content Include="Farmer\AgroStores.aspx" />
+    <Content Include="Farmer\CropDetails.aspx" />
+    <Content Include="Farmer\Crops.aspx" />
+    <Content Include="Farmer\Dashboard.aspx" />
+    <Content Include="Farmer\DiseaseDetails.aspx" />
+    <Content Include="Farmer\DiseaseSolutions.aspx" />
+    <Content Include="Farmer\FertilizerDetails.aspx" />
+    <Content Include="Farmer\Fertilizers.aspx" />
+    <Content Include="Farmer\Notifications.aspx" />
+    <Content Include="Farmer\PesticideDetails.aspx" />
+    <Content Include="Farmer\Pesticides.aspx" />
+    <Content Include="Farmer\Profile.aspx" />
+    <Content Include="Farmer\Saved.aspx" />
+    <Content Include="Farmer\Schemes.aspx" />
+    <Content Include="Farmer\Settings.aspx" />
+    <Content Include="Images\admin\admin_bg.jpg" />
+    <Content Include="Images\admin\admin_register_bg.jpg" />
+    <Content Include="Images\avatars\amit_patel.jpg" />
+    <Content Include="Images\avatars\amit_shah.jpg" />
+    <Content Include="Images\avatars\amit_sharma.jpg" />
+    <Content Include="Images\avatars\ananya_das.jpg" />
+    <Content Include="Images\avatars\anjali_sharma.jpg" />
+    <Content Include="Images\avatars\meera_devi.jpg" />
+    <Content Include="Images\avatars\priya_sharma.jpg" />
+    <Content Include="Images\avatars\rahul_desai.jpg" />
+    <Content Include="Images\avatars\rajesh_gadhavi.jpg" />
+    <Content Include="Images\avatars\rajesh_kumar_shop.jpg" />
+    <Content Include="Images\avatars\rajesh_patel.jpg" />
+    <Content Include="Images\avatars\raju_patel.jpg" />
+    <Content Include="Images\avatars\ramesh_kumar.jpg" />
+    <Content Include="Images\avatars\ramesh_profile.jpg" />
+    <Content Include="Images\avatars\sunita_reddy.jpg" />
+    <Content Include="Images\avatars\suresh_kumar.jpg" />
+    <Content Include="Images\avatars\vikram_singh.jpg" />
+    <Content Include="Images\avatars\vikram_singh_shop.jpg" />
+    <Content Include="Images\crops\aphids.jpg" />
+    <Content Include="Images\crops\chili.jpg" />
+    <Content Include="Images\crops\cotton.jpg" />
+    <Content Include="Images\crops\groundnut.jpg" />
+    <Content Include="Images\crops\karnal_bunt.jpg" />
+    <Content Include="Images\crops\mango.jpg" />
+    <Content Include="Images\crops\onion.jpg" />
+    <Content Include="Images\crops\rice.jpg" />
+    <Content Include="Images\crops\tomato.jpg" />
+    <Content Include="Images\crops\wheat.jpg" />
+    <Content Include="Images\crops\wheat_banner.jpg" />
+    <Content Include="Images\crops\yellow_rust.jpg" />
+    <Content Include="Images\diseases\blast_paddy.jpg" />
+    <Content Include="Images\diseases\cotton_leaf_curl.jpg" />
+    <Content Include="Images\diseases\wheat_stem_rust.jpg" />
+    <Content Include="Images\extracted\pdf1_p10_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img10_1344.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img11_1346.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img12_1350.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img13_1357.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img14_1359.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img15_1363.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img16_1370.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img17_1346.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img18_1374.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img1_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img2_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img3_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img4_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img5_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img6_755.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img7_1331.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img8_1333.jpeg" />
+    <Content Include="Images\extracted\pdf1_p10_img9_1337.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img0_32.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img1_36.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img2_40.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img3_40.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img4_46.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img5_54.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img6_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p1_img7_62.jpeg" />
+    <Content Include="Images\extracted\pdf1_p2_img0_268.jpeg" />
+    <Content Include="Images\extracted\pdf1_p2_img1_270.jpeg" />
+    <Content Include="Images\extracted\pdf1_p2_img2_273.jpeg" />
+    <Content Include="Images\extracted\pdf1_p2_img3_284.jpeg" />
+    <Content Include="Images\extracted\pdf1_p2_img4_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p2_img5_62.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img10_434.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img11_438.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img12_446.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img13_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img1_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img2_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img3_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img4_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img5_421.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img6_425.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img7_430.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img8_434.jpeg" />
+    <Content Include="Images\extracted\pdf1_p3_img9_438.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img10_571.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img11_574.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img12_579.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img13_582.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img14_585.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img15_588.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img1_562.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img2_576.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img3_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img4_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img5_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img6_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img7_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img8_565.jpeg" />
+    <Content Include="Images\extracted\pdf1_p4_img9_568.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img10_692.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img1_668.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img2_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img3_661.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img4_665.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img5_565.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img6_672.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img7_680.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img8_684.jpeg" />
+    <Content Include="Images\extracted\pdf1_p5_img9_688.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img10_751.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img11_755.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img12_761.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img13_763.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img14_772.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img15_763.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img16_778.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img17_763.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img18_786.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img19_763.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img1_758.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img20_792.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img21_763.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img2_769.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img3_783.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img4_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img5_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img6_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img7_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img8_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p6_img9_421.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img10_843.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img11_849.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img12_851.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img13_857.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img14_859.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img1_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img2_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img3_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img4_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img5_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img6_829.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img7_833.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img8_835.jpeg" />
+    <Content Include="Images\extracted\pdf1_p7_img9_841.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img0_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img10_1068.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img11_1071.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img12_1075.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img13_1064.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img14_1081.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img15_1064.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img16_1089.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img1_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img2_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img3_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img4_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img5_1048.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img6_1052.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img7_1056.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img8_1060.jpeg" />
+    <Content Include="Images\extracted\pdf1_p8_img9_1064.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img0_428.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img10_1141.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img11_1147.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img12_1152.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img13_1156.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img14_1161.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img15_1165.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img1_1132.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img2_449.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img3_451.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img4_453.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img5_455.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img6_58.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img7_755.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img8_1135.jpeg" />
+    <Content Include="Images\extracted\pdf1_p9_img9_1137.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img0_1242.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img1_794.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img2_798.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img3_901.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img4_905.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img5_1245.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img6_1252.jpeg" />
+    <Content Include="Images\extracted\pdf2_p10_img7_1256.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img0_28.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img10_49.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img11_51.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img1_55.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img2_57.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img3_59.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img4_61.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img5_23.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img6_32.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img7_34.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img8_41.jpeg" />
+    <Content Include="Images\extracted\pdf2_p1_img9_43.jpeg" />
+    <Content Include="Images\extracted\pdf2_p2_img0_28.jpeg" />
+    <Content Include="Images\extracted\pdf2_p2_img1_55.jpeg" />
+    <Content Include="Images\extracted\pdf2_p2_img2_57.jpeg" />
+    <Content Include="Images\extracted\pdf2_p2_img3_59.jpeg" />
+    <Content Include="Images\extracted\pdf2_p2_img4_61.jpeg" />
+    <Content Include="Images\extracted\pdf2_p2_img5_23.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img0_28.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img10_524.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img11_528.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img12_538.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img1_55.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img2_57.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img3_59.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img4_61.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img5_23.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img6_508.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img7_512.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img8_516.jpeg" />
+    <Content Include="Images\extracted\pdf2_p3_img9_520.jpeg" />
+    <Content Include="Images\extracted\pdf2_p4_img0_55.jpeg" />
+    <Content Include="Images\extracted\pdf2_p4_img1_57.jpeg" />
+    <Content Include="Images\extracted\pdf2_p4_img2_59.jpeg" />
+    <Content Include="Images\extracted\pdf2_p4_img3_61.jpeg" />
+    <Content Include="Images\extracted\pdf2_p4_img4_23.jpeg" />
+    <Content Include="Images\extracted\pdf2_p5_img0_55.jpeg" />
+    <Content Include="Images\extracted\pdf2_p5_img1_57.jpeg" />
+    <Content Include="Images\extracted\pdf2_p5_img2_59.jpeg" />
+    <Content Include="Images\extracted\pdf2_p5_img3_61.jpeg" />
+    <Content Include="Images\extracted\pdf2_p5_img4_23.jpeg" />
+    <Content Include="Images\extracted\pdf2_p5_img5_696.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img0_803.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img10_829.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img11_830.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img12_831.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img13_832.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img1_826.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img2_794.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img3_798.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img4_805.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img5_809.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img6_813.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img7_813.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img8_813.jpeg" />
+    <Content Include="Images\extracted\pdf2_p6_img9_821.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img0_908.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img1_794.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img2_798.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img3_901.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img4_905.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img5_916.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img6_919.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img7_922.jpeg" />
+    <Content Include="Images\extracted\pdf2_p7_img8_925.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img0_1037.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img1_794.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img2_798.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img3_901.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img4_905.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img5_1040.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img6_1041.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img7_1047.jpeg" />
+    <Content Include="Images\extracted\pdf2_p8_img8_1043.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img0_1151.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img1_794.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img2_798.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img3_901.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img4_905.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img5_1159.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img6_1162.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img7_1165.jpeg" />
+    <Content Include="Images\extracted\pdf2_p9_img8_1168.jpeg" />
+    <Content Include="Images\extracted\pdf3_p10_img0_988.jpeg" />
+    <Content Include="Images\extracted\pdf3_p10_img1_989.jpeg" />
+    <Content Include="Images\extracted\pdf3_p10_img2_990.jpeg" />
+    <Content Include="Images\extracted\pdf3_p10_img3_991.jpeg" />
+    <Content Include="Images\extracted\pdf3_p10_img4_992.jpeg" />
+    <Content Include="Images\extracted\pdf3_p11_img0_1013.jpeg" />
+    <Content Include="Images\extracted\pdf3_p11_img1_1021.jpeg" />
+    <Content Include="Images\extracted\pdf3_p11_img2_1024.jpeg" />
+    <Content Include="Images\extracted\pdf3_p11_img3_1027.jpeg" />
+    <Content Include="Images\extracted\pdf3_p13_img0_1192.jpeg" />
+    <Content Include="Images\extracted\pdf3_p13_img1_1195.jpeg" />
+    <Content Include="Images\extracted\pdf3_p13_img2_1196.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img0_40.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img1_44.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img2_48.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img3_52.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img4_62.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img5_74.jpeg" />
+    <Content Include="Images\extracted\pdf3_p1_img6_78.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img0_285.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img10_302.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img11_305.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img12_298.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img1_40.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img2_44.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img3_278.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img4_282.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img5_296.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img6_300.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img7_307.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img8_294.jpeg" />
+    <Content Include="Images\extracted\pdf3_p2_img9_298.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img0_493.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img10_496.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img11_497.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img12_498.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img13_499.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img14_500.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img1_40.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img2_44.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img3_470.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img4_478.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img5_482.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img6_482.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img7_482.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img8_482.jpeg" />
+    <Content Include="Images\extracted\pdf3_p3_img9_282.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img0_565.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img10_552.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img11_552.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img12_552.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img13_552.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img14_562.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img1_566.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img2_567.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img3_568.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img4_569.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img5_570.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img6_571.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img7_577.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img8_40.jpeg" />
+    <Content Include="Images\extracted\pdf3_p4_img9_44.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img0_577.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img1_717.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img2_762.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img3_731.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img4_734.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img5_738.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img6_754.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img7_758.jpeg" />
+    <Content Include="Images\extracted\pdf3_p5_img8_765.jpeg" />
+    <Content Include="Images\extracted\pdf3_p6_img0_810.jpeg" />
+    <Content Include="Images\extracted\pdf3_p6_img1_813.jpeg" />
+    <Content Include="Images\extracted\pdf3_p6_img2_819.jpeg" />
+    <Content Include="Images\extracted\pdf3_p6_img3_827.jpeg" />
+    <Content Include="Images\extracted\pdf3_p7_img0_889.jpeg" />
+    <Content Include="Images\extracted\pdf3_p7_img1_813.jpeg" />
+    <Content Include="Images\extracted\pdf3_p7_img2_894.jpeg" />
+    <Content Include="Images\extracted\pdf3_p8_img0_937.jpeg" />
+    <Content Include="Images\extracted\pdf3_p8_img1_940.jpeg" />
+    <Content Include="Images\extracted\pdf3_p8_img2_943.jpeg" />
+    <Content Include="Images\extracted\pdf3_p8_img3_946.jpeg" />
+    <Content Include="Images\extracted\pdf3_p9_img0_969.jpeg" />
+    <Content Include="Images\extracted\pdf3_p9_img1_970.jpeg" />
+    <Content Include="Images\extracted\pdf3_p9_img2_971.jpeg" />
+    <Content Include="Images\extracted\pdf3_p9_img3_972.jpeg" />
+    <Content Include="Images\extracted\pdf3_p9_img4_973.jpeg" />
+    <Content Include="Images\fertilizers\dap.jpg" />
+    <Content Include="Images\fertilizers\mop.jpg" />
+    <Content Include="Images\fertilizers\urea.jpg" />
+    <Content Include="Images\fertilizers\vermicompost.jpg" />
+    <Content Include="Images\icons\logo_card.png" />
+    <Content Include="Images\icons\logo_leaf.png" />
+    <Content Include="Images\pesticides\chlorpyrifos.jpg" />
+    <Content Include="Images\pesticides\mancozeb.jpg" />
+    <Content Include="Images\pesticides\neem_oil.jpg" />
+    <Content Include="Images\pesticides\trichoderma.jpg" />
+    <Content Include="Images\products\dap_fertilizer.jpg" />
+    <Content Include="Images\products\hybrid_corn_seeds.jpg" />
+    <Content Include="Images\products\mop_potash.jpg" />
+    <Content Include="Images\products\neem_admin.jpg" />
+    <Content Include="Images\products\neem_oil_concentrate.jpg" />
+    <Content Include="Images\products\organic_liquid.jpg" />
+    <Content Include="Images\products\steel_trowel.jpg" />
+    <Content Include="Images\products\tomato_seeds_admin.jpg" />
+    <Content Include="Images\products\urea_admin.jpg" />
+    <Content Include="Images\products\urea_nitrogen.jpg" />
+    <Content Include="Images\saved\brown_rust.jpg" />
+    <Content Include="Images\saved\chili_storage.jpg" />
+    <Content Include="Images\saved\cotton_monsoon.jpg" />
+    <Content Include="Images\saved\potato_blight.jpg" />
+    <Content Include="Images\saved\wheat_tips.jpg" />
+    <Content Include="Images\stores\ambika_biotech.jpg" />
+    <Content Include="Images\stores\bharat_krushi.jpg" />
+    <Content Include="Images\stores\green_valley.jpg" />
+    <Content Include="Images\stores\khedut_beej.jpg" />
+    <Content Include="Images\stores\kisan_agro.jpg" />
+    <Content Include="Images\stores\kisan_agro_banner.jpg" />
+    <Content Include="Images\stores\organic_earth.jpg" />
+    <Content Include="Images\stores\patel_seeds.jpg" />
+    <Content Include="Images\stores\sardar_fertilizer.jpg" />
+    <Content Include="KhedutPlus.sln" />
+    <Content Include="qa\page_renders\pdf1_page1.png" />
+    <Content Include="qa\page_renders\pdf1_page10.png" />
+    <Content Include="qa\page_renders\pdf1_page2.png" />
+    <Content Include="qa\page_renders\pdf1_page3.png" />
+    <Content Include="qa\page_renders\pdf1_page4.png" />
+    <Content Include="qa\page_renders\pdf1_page5.png" />
+    <Content Include="qa\page_renders\pdf1_page6.png" />
+    <Content Include="qa\page_renders\pdf1_page7.png" />
+    <Content Include="qa\page_renders\pdf1_page8.png" />
+    <Content Include="qa\page_renders\pdf1_page9.png" />
+    <Content Include="qa\page_renders\pdf2_page1.png" />
+    <Content Include="qa\page_renders\pdf2_page10.png" />
+    <Content Include="qa\page_renders\pdf2_page2.png" />
+    <Content Include="qa\page_renders\pdf2_page3.png" />
+    <Content Include="qa\page_renders\pdf2_page4.png" />
+    <Content Include="qa\page_renders\pdf2_page5.png" />
+    <Content Include="qa\page_renders\pdf2_page6.png" />
+    <Content Include="qa\page_renders\pdf2_page7.png" />
+    <Content Include="qa\page_renders\pdf2_page8.png" />
+    <Content Include="qa\page_renders\pdf2_page9.png" />
+    <Content Include="qa\page_renders\pdf3_page1.png" />
+    <Content Include="qa\page_renders\pdf3_page10.png" />
+    <Content Include="qa\page_renders\pdf3_page11.png" />
+    <Content Include="qa\page_renders\pdf3_page12.png" />
+    <Content Include="qa\page_renders\pdf3_page13.png" />
+    <Content Include="qa\page_renders\pdf3_page2.png" />
+    <Content Include="qa\page_renders\pdf3_page3.png" />
+    <Content Include="qa\page_renders\pdf3_page4.png" />
+    <Content Include="qa\page_renders\pdf3_page5.png" />
+    <Content Include="qa\page_renders\pdf3_page6.png" />
+    <Content Include="qa\page_renders\pdf3_page7.png" />
+    <Content Include="qa\page_renders\pdf3_page8.png" />
+    <Content Include="qa\page_renders\pdf3_page9.png" />
+    <Content Include="README.md" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\js\site.js" />
+    <Content Include="Shop\About.aspx" />
+    <Content Include="Shop\AddCustomer.aspx" />
+    <Content Include="Shop\AddProduct.aspx" />
+    <Content Include="Shop\Contact.aspx" />
+    <Content Include="Shop\Customers.aspx" />
+    <Content Include="Shop\Dashboard.aspx" />
+    <Content Include="Shop\EditCustomer.aspx" />
+    <Content Include="Shop\EditInventory.aspx" />
+    <Content Include="Shop\EditOrder.aspx" />
+    <Content Include="Shop\Inventory.aspx" />
+    <Content Include="Shop\NewStockUpdate.aspx" />
+    <Content Include="Shop\Notifications.aspx" />
+    <Content Include="Shop\OrderDetails.aspx" />
+    <Content Include="Shop\Orders.aspx" />
+    <Content Include="Shop\Settings.aspx" />
+    <Content Include="Shop\StockUpdates.aspx" />
+    <Content Include="UserControls\AdminSidebar.ascx" />
+    <Content Include="UserControls\FarmerFooter.ascx" />
+    <Content Include="UserControls\FarmerNavbar.ascx" />
+    <Content Include="UserControls\FarmerSidebar.ascx" />
+    <Content Include="UserControls\ShopSidebar.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AgroShops.aspx.cs">
+      <DependentUpon>AgroShops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AgroShops.aspx.designer.cs">
+      <DependentUpon>AgroShops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Farmers.aspx.cs">
+      <DependentUpon>Farmers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Farmers.aspx.designer.cs">
+      <DependentUpon>Farmers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Schemes.aspx.cs">
+      <DependentUpon>Schemes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Schemes.aspx.designer.cs">
+      <DependentUpon>Schemes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Announcements.aspx.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Announcements.aspx.designer.cs">
+      <DependentUpon>Announcements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Crops.aspx.cs">
+      <DependentUpon>Crops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Crops.aspx.designer.cs">
+      <DependentUpon>Crops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DiseaseSolutions.aspx.cs">
+      <DependentUpon>DiseaseSolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DiseaseSolutions.aspx.designer.cs">
+      <DependentUpon>DiseaseSolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Fertilizers.aspx.cs">
+      <DependentUpon>Fertilizers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Fertilizers.aspx.designer.cs">
+      <DependentUpon>Fertilizers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pesticides.aspx.cs">
+      <DependentUpon>Pesticides.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pesticides.aspx.designer.cs">
+      <DependentUpon>Pesticides.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\AgroStoreDetails.aspx.cs">
+      <DependentUpon>AgroStoreDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\AgroStoreDetails.aspx.designer.cs">
+      <DependentUpon>AgroStoreDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\AgroStores.aspx.cs">
+      <DependentUpon>AgroStores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\AgroStores.aspx.designer.cs">
+      <DependentUpon>AgroStores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\CropDetails.aspx.cs">
+      <DependentUpon>CropDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\CropDetails.aspx.designer.cs">
+      <DependentUpon>CropDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Crops.aspx.cs">
+      <DependentUpon>Crops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Crops.aspx.designer.cs">
+      <DependentUpon>Crops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\DiseaseDetails.aspx.cs">
+      <DependentUpon>DiseaseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\DiseaseDetails.aspx.designer.cs">
+      <DependentUpon>DiseaseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\DiseaseSolutions.aspx.cs">
+      <DependentUpon>DiseaseSolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\DiseaseSolutions.aspx.designer.cs">
+      <DependentUpon>DiseaseSolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\FertilizerDetails.aspx.cs">
+      <DependentUpon>FertilizerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\FertilizerDetails.aspx.designer.cs">
+      <DependentUpon>FertilizerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Fertilizers.aspx.cs">
+      <DependentUpon>Fertilizers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Fertilizers.aspx.designer.cs">
+      <DependentUpon>Fertilizers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\PesticideDetails.aspx.cs">
+      <DependentUpon>PesticideDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\PesticideDetails.aspx.designer.cs">
+      <DependentUpon>PesticideDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Pesticides.aspx.cs">
+      <DependentUpon>Pesticides.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Pesticides.aspx.designer.cs">
+      <DependentUpon>Pesticides.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Saved.aspx.cs">
+      <DependentUpon>Saved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Saved.aspx.designer.cs">
+      <DependentUpon>Saved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Schemes.aspx.cs">
+      <DependentUpon>Schemes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Schemes.aspx.designer.cs">
+      <DependentUpon>Schemes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmer\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Farmer.Master.cs">
+      <DependentUpon>Farmer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Shop.Master.cs">
+      <DependentUpon>Shop.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\DataStore.cs" />
+    <Compile Include="Models\DbHelper.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\StockUpdates.aspx.cs">
+      <DependentUpon>StockUpdates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\StockUpdates.aspx.designer.cs">
+      <DependentUpon>StockUpdates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\AddCustomer.aspx.designer.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\EditCustomer.aspx.cs">
+      <DependentUpon>EditCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\EditCustomer.aspx.designer.cs">
+      <DependentUpon>EditCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\EditInventory.aspx.cs">
+      <DependentUpon>EditInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\EditInventory.aspx.designer.cs">
+      <DependentUpon>EditInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\EditOrder.aspx.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\EditOrder.aspx.designer.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\NewStockUpdate.aspx.cs">
+      <DependentUpon>NewStockUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\NewStockUpdate.aspx.designer.cs">
+      <DependentUpon>NewStockUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AdminSidebar.ascx.cs">
+      <DependentUpon>AdminSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FarmerFooter.ascx.cs">
+      <DependentUpon>FarmerFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FarmerNavbar.ascx.cs">
+      <DependentUpon>FarmerNavbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FarmerSidebar.ascx.cs">
+      <DependentUpon>FarmerSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ShopSidebar.ascx.cs">
+      <DependentUpon>ShopSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\Admin.Master" />
+    <Content Include="MasterPages\Farmer.Master" />
+    <Content Include="MasterPages\Shop.Master" />
+    <Content Include="MasterPages\Site.Master" />
+    <Content Include="Web.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != '' and Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60619</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60619/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+</Project>

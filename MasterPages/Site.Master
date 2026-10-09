@@ -1,0 +1,27 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="KhedutPlus.MasterPages.Site" %>
+<%@ Register TagPrefix="khedut" TagName="FarmerNavbar" Src="~/UserControls/FarmerNavbar.ascx" %>
+<%@ Register TagPrefix="khedut" TagName="FarmerFooter" Src="~/UserControls/FarmerFooter.ascx" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - KhedutPlus Farmer Ecosystem</title>
+    <link rel="stylesheet" href="/Content/css/site.css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="mainForm" runat="server">
+        <khedut:FarmerNavbar ID="NavControl" runat="server" />
+        
+        <main>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </main>
+
+        <khedut:FarmerFooter ID="FooterControl" runat="server" />
+    </form>
+    <script src="/Scripts/js/site.js"></script>
+    <asp:ContentPlaceHolder ID="ScriptsContent" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

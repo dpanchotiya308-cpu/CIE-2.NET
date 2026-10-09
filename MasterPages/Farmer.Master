@@ -1,0 +1,53 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Farmer.Master.cs" Inherits="KhedutPlus.MasterPages.Farmer" %>
+<%@ Register TagPrefix="khedut" TagName="FarmerSidebar" Src="~/UserControls/FarmerSidebar.ascx" %>
+<%@ Register TagPrefix="khedut" TagName="FarmerFooter" Src="~/UserControls/FarmerFooter.ascx" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - KhedutPlus Farmer Portal</title>
+    <link rel="stylesheet" href="/Content/css/site.css" />
+    <asp:ContentPlaceHolder ID="FarmerHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="farmerForm" runat="server">
+        <div class="portal-layout">
+            <khedut:FarmerSidebar ID="SidebarCtrl" runat="server" />
+            
+            <div class="portal-main">
+                <header class="portal-topbar">
+                    <div class="search-box">
+<%--                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="topSearchInput" class="form-control" placeholder="Search crops, diseases, schemes..." />--%>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <a href="/Farmer/Notifications.aspx" style="position: relative; color: #64748b; padding: 6px;" title="Notifications">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                            <span style="position: absolute; top: 4px; right: 4px; width: 8px; height: 8px; border-radius: 50%; background-color: #ef4444; border: 2px solid #ffffff;"></span>
+                        </a>
+
+                        <a href="/Farmer/Profile.aspx" class="user-profile-badge">
+                            <img src="<%= GetFarmerAvatar() %>" alt="Farmer Profile" class="user-profile-avatar" onerror="this.onerror=null;this.src='/Images/avatars/ramesh_kumar.jpg';" />
+                            <div class="user-profile-details">
+                                <div class="user-profile-name"><%= GetFarmerName() %></div>
+                                <div class="user-profile-role">Farmer</div>
+                            </div>
+                        </a>
+                    </div>
+                </header>
+
+                <div class="portal-body">
+                    <asp:ContentPlaceHolder ID="FarmerContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+
+                <khedut:FarmerFooter ID="FooterCtrl" runat="server" />
+            </div>
+        </div>
+    </form>
+    <script src="/Scripts/js/site.js"></script>
+    <asp:ContentPlaceHolder ID="FarmerScripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
